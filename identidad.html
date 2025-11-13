@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Founders — Identidad</title>
+    <style>
+      :root {
+        --brand: #5cd6ff;
+        --brand-dark: #3aa6cc;
+        --violet: #2e1b8a;
+        --bg: linear-gradient(135deg, #0a0520, #1c0360, #2a0b80);
+        --muted: rgba(255, 255, 255, 0.8);
+        --glass: rgba(255, 255, 255, 0.07);
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: #fff;
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 28px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 20;
+        background: rgba(10, 5, 32, 0.6);
+        backdrop-filter: blur(8px);
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .brand img {
+        width: 48px;
+        height: 48px;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+      .nav .menu {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+      }
+      .nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+      .nav a:hover {
+        color: var(--brand);
+      }
+      main {
+        max-width: 900px;
+        margin: 160px auto 80px;
+        background: var(--glass);
+        padding: 40px;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      }
+      h1 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+      p {
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .back {
+        display: inline-block;
+        margin-top: 40px;
+        padding: 12px 20px;
+        border-radius: 10px;
+        background: linear-gradient(90deg, var(--brand), #b379ff);
+        color: #070707;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      .back:hover {
+        opacity: 0.85;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="brand">
+        <img
+          src="https://i.ibb.co/hJG1J0GX/logo.png"
+          alt="Logo Game Founders"
+        />
+        <div>
+          <div style="font-weight: 800">Game Founders</div>
+          <div style="font-size: 12px; color: var(--muted); margin-top: 2px">
+            Empresa de Juegos
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="identidad.html">Identidad</a>
+        <a href="valores.html">Valores</a>
+        <a href="responsabilidad.html">Responsabilidad</a>
+      </div>
+    </nav>
+
+    <main>
+      <h1>Identidad</h1>
+      <p>
+        Nos definimos como un equipo joven, dinámico y comprometido con la
+        innovación educativa. Nuestros productos reflejan creatividad,
+        accesibilidad y un enfoque centrado en el estudiante. Utilizamos una
+        estética moderna y amigable que invita a explorar y aprender de forma
+        divertida. Nuestra identidad se basa en la creatividad, el compromiso,
+        la innovación y el trabajo colaborativo: pilares que nos diferencian
+        como equipo.
+      </p>
+      <a class="back" href="index.html">← Volver al inicio</a>
+    </main>
+  </body>
+</html>
