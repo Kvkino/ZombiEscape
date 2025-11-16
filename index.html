@@ -118,6 +118,7 @@
         font-weight: 700;
         text-decoration: none;
         display: inline-block;
+        cursor: pointer;
       }
       .btn.primary {
         background: linear-gradient(90deg, var(--brand), #b379ff);
@@ -308,9 +309,9 @@
         <a href="valores.html">Valores</a>
         <a href="responsabilidad.html">Responsabilidad</a>
         <button id="helpBtn">Ayuda</button>
-        <a class="cta" href="EscapaDelZombie.zip" download="EscapaDelZombie.zip"
-          >Jugar ahora</a
-        >
+
+        <!-- 🔥 MODIFICADO: ya NO descarga -->
+        <button class="cta" id="playNowBtn">Jugar ahora</button>
       </div>
     </nav>
 
@@ -325,12 +326,9 @@
         </p>
 
         <div class="actions">
-          <a
-            class="btn primary"
-            href="EscapaDelZombie.zip"
-            download="EscapaDelZombie.zip"
-            >Descargar juego</a
-          >
+          <!-- 🔥 MODIFICADO: ya NO descarga -->
+          <button class="btn primary" id="downloadBtn">Descargar juego</button>
+
           <a class="btn ghost" href="#el-juego">Ver descripción</a>
         </div>
 
@@ -432,6 +430,7 @@
       </div>
     </footer>
 
+    <!-- Modal Ayuda -->
     <div id="helpModal" class="modal">
       <div class="modal-content">
         <h3>💬 ¿Necesitás ayuda?</h3>
@@ -440,6 +439,18 @@
           responderemos lo antes posible.
         </p>
         <button class="close" id="closeHelp">Cerrar</button>
+      </div>
+    </div>
+
+    <!-- 🔥 NUEVO MODAL "Disponible muy pronto" -->
+    <div id="comingSoonModal" class="modal">
+      <div class="modal-content">
+        <h3>🚧 Disponible muy pronto</h3>
+        <p>
+          El juego todavía no se puede descargar.<br />
+          ¡Estamos trabajando para publicarlo muy pronto!
+        </p>
+        <button class="close" id="closeComingSoon">Cerrar</button>
       </div>
     </div>
 
@@ -469,8 +480,21 @@
 
       openBtn.onclick = () => (modal.style.display = "flex");
       closeBtn.onclick = () => (modal.style.display = "none");
+
+      // 🔥 NUEVO SCRIPT para el modal "Disponible muy pronto"
+      const comingSoonModal = document.getElementById("comingSoonModal");
+      const playNowBtn = document.getElementById("playNowBtn");
+      const downloadBtn = document.getElementById("downloadBtn");
+      const closeComingSoon = document.getElementById("closeComingSoon");
+
+      playNowBtn.onclick = () => (comingSoonModal.style.display = "flex");
+      downloadBtn.onclick = () => (comingSoonModal.style.display = "flex");
+      closeComingSoon.onclick = () => (comingSoonModal.style.display = "none");
+
       window.onclick = (e) => {
         if (e.target === modal) modal.style.display = "none";
+        if (e.target === comingSoonModal)
+          comingSoonModal.style.display = "none";
       };
     </script>
   </body>
